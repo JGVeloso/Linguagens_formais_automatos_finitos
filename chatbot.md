@@ -48,4 +48,143 @@ Objetivo: Tirar dúvidas sobre variáveis em diversas linguagens de programaçã
 
 **Bot:** "Obrigado por usar nossos serviços, volte sempre!"
 
+## 5) Código
 
+```java
+  import java.util.Scanner;
+  
+  public class ChatbotVariaveis {
+  
+    public static void main(String[] args) {
+      Scanner sc = new Scanner(System.in);
+  
+      String estado = "SAUDACAO";
+      String linguagem = "";
+      String tipo = "";
+  
+      while (!estado.equals("FIM")) {
+  
+        switch (estado) {
+  
+          case "SAUDACAO":
+            System.out.println("Olá, bem-vindo ao chatbot sobre variáveis!\n");
+            estado = "ESCOLHA_LINGUAGEM";
+            break;
+  
+          case "ESCOLHA_LINGUAGEM":
+            while (true) {
+              System.out.println("Escolha a linguagem de programação:\n");
+              System.out.println("1 - Python  \n2 - Java  \n3 - C");
+              String langInput = sc.nextLine().trim();
+  
+              if (langInput.equals("1")) {
+                linguagem = "Python";
+                estado = "ESCOLHA_TIPO";
+                break;
+              } else if (langInput.equals("2")) {
+                linguagem = "Java";
+                estado = "ESCOLHA_TIPO";
+                break;
+              } else if (langInput.equals("3")) {
+                linguagem = "C";
+                estado = "ESCOLHA_TIPO";
+                break;
+              } else {
+                System.out.println("Opção inválida. Digite 1, 2 ou 3.");
+              }
+            }
+            break;
+  
+          case "ESCOLHA_TIPO":
+            while (true) {
+              System.out.println("Escolha o tipo de variável:\n");
+              System.out.println("1 - int  \n2 - float/double  \n3 - string/char  \n4 - boolean");
+              String tipoInput = sc.nextLine().trim();
+  
+              if (tipoInput.equals("1")) {
+                tipo = "int";
+              } else if (tipoInput.equals("2")) {
+                tipo = linguagem.equals("Java") ? "double" : "float";
+              } else if (tipoInput.equals("3")) {
+                tipo = linguagem.equals("C") ? "char[]" : "String";
+              } else if (tipoInput.equals("4")) {
+                tipo = "boolean";
+              } else {
+                System.out.println("Opção inválida. Digite 1, 2, 3 ou 4.");
+                continue; // permanece no mesmo estado
+              }
+  
+              System.out.println("Em " + linguagem + ", " + tipo + " representa " + descricaoTipo(linguagem, tipo));
+              estado = "ESCOLHER_OUTRA";
+              break;
+            }
+            break;
+  
+          case "ESCOLHER_OUTRA":
+            while (true) {
+              System.out.println("O que deseja fazer agora?\n");
+              System.out.println("1 - Aprender outro tipo  \n2 - Trocar de linguagem  \n3 - Sair");
+              String escolha = sc.nextLine().trim();
+  
+              if (escolha.equals("1")) {
+                estado = "ESCOLHA_TIPO";
+                break;
+              } else if (escolha.equals("2")) {
+                estado = "ESCOLHA_LINGUAGEM";
+                break;
+              } else if (escolha.equals("3")) {
+                estado = "FIM";
+                break;
+              } else {
+                System.out.println("Opção inválida. Digite 1, 2 ou 3.");
+              }
+            }
+            break;
+  
+        }
+      }
+  
+      System.out.println("\nObrigado por usar nossos serviços, volte sempre!");
+      sc.close();
+    }
+  
+    public static String descricaoTipo(String linguagem, String tipo) {
+      switch (tipo) {
+        case "int":
+          return "números inteiros. Ex: x = 10";
+        case "float":
+          return "números decimais. Ex: x = 3.14";
+        case "double":
+          return "números decimais de precisão dupla. Ex: x = 3.14";
+        case "String":
+          return "textos. Ex: nome = \"João\"";
+        case "char[]":
+          return "textos ou caracteres. Ex: char nome[] = \"Joao\";";
+        case "boolean":
+          return "valores verdadeiros ou falsos. Ex: flag = true";
+        default:
+          return "";
+      }
+    }
+  }
+```
+## 6) Testes
+### Teste 1: Saudação e escolha da linguagem
+   ![0](https://github.com/user-attachments/assets/6aacdb0d-48c2-4289-973c-2df70606cf8f)
+   > O usuário inicia a conversa e o chatbot responde com uma saudação, apresentando o menu de linguagens disponíveis.
+
+### Teste 2: Escolha do tipo de variável
+   ![3](https://github.com/user-attachments/assets/ed44e543-991c-4003-a0eb-70ae08c97eb2)
+   > Após selecionar a linguagem, o chatbot exibe os tipos de variáveis disponíveis para escolha.
+
+### Teste 3: Trocando de linguagem
+   ![4](https://github.com/user-attachments/assets/333d68ae-cca1-4015-98c2-3d2b209d774e)
+   > Depois de apresentar a descrição do tipo de variável, o chatbot oferece a opção de trocar a linguagem de programação.
+
+### Teste 4: Escolhendo uma nova linguagem
+   ![5](https://github.com/user-attachments/assets/0ee82644-c208-44f7-8629-39d0511c9499)
+   > O chatbot retorna ao menu de seleção de linguagens, permitindo que o usuário escolha uma nova linguagem para explorar.
+
+### Teste 5: Encerramento
+   ![7](https://github.com/user-attachments/assets/de1b1da6-bf0a-4822-bfdd-eefc81ee7f8e)
+   > Ao término das interações, o chatbot apresenta ao usuário a opção de sair, finalizando a sessão caso seja escolhida.
