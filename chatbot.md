@@ -18,7 +18,7 @@ Caminho 1 - Outra variável
 | Estado | Ação do Usuário | Próximo Estado |
 |--------|-----------------|----------------|
 | Escolher se deseja outra variável, linguagem ou finalizar | Escolheu outra variável |Escolher se deseja outra variável, linguagem ou finalizar|
-| Escolher se deseja outra variável, linguagem ou finalizar| Finalizou | Fim |
+| Escolher se deseja outra variável, linguagem ou finalizar|  Escolheu finalizar | Fim |
 | Fim |
  
 Caminho 2 - Outra linguagem 
@@ -26,7 +26,7 @@ Caminho 2 - Outra linguagem
 |--------|-----------------|----------------|
 | Escolher se deseja outra variável, linguagem ou finalizar | Escolheu outra Linguagem |Escolha o tipo variável que quer saber sobre|
 | Escolha o tipo variável que quer saber sobre | Escolher a variável | Escolher se deseja outra variável, linguagem ou finalizar |
-| Escolher se deseja outra variável ou linguagem | Não escolheu nenhuma das opçoes | Fim |
+| Escolher se deseja outra variável, linguagem ou finalizar | Escolheu finalizar | Fim |
 | Fim |
 
 Caminho 3 - Finalizou
