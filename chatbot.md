@@ -12,8 +12,27 @@ Objetivo: Tirar dúvidas sobre variáveis em diversas linguagens de programaçã
 |--------|-----------------|----------------|
 | SAUDACAO | Qualquer saudação | Escolha a linguagem de programação |
 | Escolha a linguagem de programação | Escolher a linguagem | Escolha o tipo variável que quer saber sobre |
-| Escolha o tipo variável que quer saber sobre | Escolher a variável | Escolher se deseja outra variável ou linguagem |
-| Escolher se deseja outra variável ou linguagem | Não escolheu nenhuma das opçoes | finaliza o atendimento |
+| Escolha o tipo variável que quer saber sobre | Escolher a variável | Escolher se deseja outra variável, linguagem ou finalizar |
+
+Caminho 1 - Outra variável
+| Estado | Ação do Usuário | Próximo Estado |
+|--------|-----------------|----------------|
+| Escolher se deseja outra variável ou linguagem | Escolheu outra variável |Escolher se deseja outra variável, linguagem ou finalizar|
+| Escolher se deseja outra variável, linguagem ou finalizar| Finalizou | Fim |
+| Fim |
+ 
+Caminho 2 - Outra linguagem 
+| Estado | Ação do Usuário | Próximo Estado |
+|--------|-----------------|----------------|
+| Escolher se deseja outra variável ou linguagem | Escolheu outra Linguagem |Escolha o tipo variável que quer saber sobre|
+| Escolha o tipo variável que quer saber sobre | Escolher a variável | Escolher se deseja outra variável, linguagem ou finalizar |
+| Escolher se deseja outra variável ou linguagem | Não escolheu nenhuma das opçoes | Fim |
+| Fim |
+
+Caminho 3 - Finalizou
+| Estado | Ação do Usuário | Próximo Estado |
+|--------|-----------------|----------------|
+| Escolher se deseja outra variável, linguagem ou finalizar | Escolheu finalizar | Fim |
 | Fim |
 
 ## 4) Exemplo de Diálogo
