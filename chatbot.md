@@ -188,3 +188,6 @@ Objetivo: Tirar dúvidas sobre variáveis em diversas linguagens de programaçã
 ### Teste 5: Encerramento
    ![7](https://github.com/user-attachments/assets/de1b1da6-bf0a-4822-bfdd-eefc81ee7f8e)
    > Ao término das interações, o chatbot apresenta ao usuário a opção de sair, finalizando a sessão caso seja escolhida.
+
+## 7) Conclusão
+  O desenvolvimento do chatbot para esclarecimento de dúvidas sobre tipos de variáveis demonstrou, na prática, como máquinas de estados podem ser aplicadas para organizar fluxos de conversação de forma simples, intuitiva e eficiente. Os diagramas, a tabela de transições e os testes realizados comprovam o correto funcionamento do chatbot, evidenciando que o sistema responde adequadamente a diferentes caminhos de interação. Além disso, o código implementado em Java reforça a aplicação prática do conceito, mostrando como um fluxo conversacional pode ser controlado por meio de estruturas condicionais e loops. No geral, o projeto cumpre o objetivo proposto: oferecer uma ferramenta simples e funcional para ajudar iniciantes em programação a entenderem os tipos de variáveis nas principais linguagens. Com isso, demonstra-se não apenas o valor didático do chatbot, mas também a importância do uso de máquinas de estados no desenvolvimento de sistemas interativos mais organizados, previsíveis e fáceis de manter.
